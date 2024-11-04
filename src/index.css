@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Shine Animation */
+@layer utilities {
+  @keyframes shine {
+    0% {
+      background-position: -200%;
+    }
+    100% {
+      background-position: 200%;
+    }
+  }
+
+  .animate-shine {
+    background: linear-gradient(
+      90deg,
+      hsla(0, 0%, 100%, 0.1),
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.1)
+    );
+    background-size: 200%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 2s infinite;
+  }
+}
+/* Removed JavaScript code */
